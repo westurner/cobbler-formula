@@ -1,0 +1,3 @@
+cobbler::
+  lookup:
+    master: cobbler-master
