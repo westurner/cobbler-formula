@@ -1,11 +1,7 @@
 
-{% from "template/map.jinja" import template with context %}
+{% from "cobbler/map.jinja" import cobbler with context %}
 
-template:
+cobbler:
   pkg:
     - installed
-    - name: {{ template.pkg }}
-  service:
-    - running
-    - name: {{ template.service }}
-    - enable: True
+    - name: {{ cobbler.pkg }}
