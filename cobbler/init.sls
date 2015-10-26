@@ -5,3 +5,7 @@ cobbler:
   pkg:
     - installed
     - name: {{ cobbler.pkg }}
+  service:
+    - running
+    - enable: True
+    - name: {{ cobbler.service }}

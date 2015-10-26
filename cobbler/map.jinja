@@ -2,6 +2,12 @@
 {% set cobbler = salt['grains.filter_by']({
     'default': {
         'pkg': 'cobbler',
+        'user': 'cobbler',
+        'service': 'cobbler',
         'config_path': '/etc/cobbler',
+        'server_name': 'cobbler',
+        'http_port': 80,
+        'install_from_source': False,
+        'prefix': '/usr/share/cobbler_src',
     },
 }, merge=salt['pillar.get']('cobbler:lookup')) %}
